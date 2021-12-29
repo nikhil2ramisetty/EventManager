@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Event Manager</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <div class="navbar navbar-expand-lg navbar-light bg-light parent-right">
+            <div class="nav-item heading">
+                <h2 class="text-secondary">Event Manager</h2>
+            </div>
+            <div class="right">
+                <a href="/login" class="nav-link text-secondary">Sign In</a>
+            </div>
+        </div>
+        <div class="col-md-4 col-md-offset-4" id="register">
+						<section id="inner-wrapper" class="register">
+							<article>
+								<form action="/register" method="post">
+									<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-user"> </i></span>
+											<input type="text" class="form-control" placeholder="First Name" name="firstname" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-user"> </i></span>
+											<input type="text" class="form-control" placeholder="Last Name" name="lastname" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
+											<input type="email" class="form-control" placeholder="Email Address" name="email" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-user"> </i></span>
+											<input type="Number" class="form-control" placeholder="Mobile Number" name="phone" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-key"> </i></span>
+											<input type="password" class="form-control" placeholder="Password" name="password" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-key"> </i></span>
+											<input type="password" class="form-control" placeholder="Confirm Password" name="cpassword" required>
+										</div>
+									</div>
+                                    {{#unless isMatching}}
+                                    <div>
+                                        {{message}}
+                                    </div>
+                                    <br>
+                                    {{/unless}}
+								    <button type="submit" class="btn btn-primary btn-block ind-button">Submit</button>
+								</form>
+							</article>
+				        </section>
+        </div>
+    </form>
+</body>
+</html>
